@@ -1,46 +1,36 @@
-const express = require('express');
-const { createServer } = require("http");
-const { Server } = require("socket.io");
+// importing express
 
-//initializing express app
-const app = express();
-const httpServer = createServer(app);
-const io = new Server(httpServer, { cors : { origin : ['http://localhost:3000'] } });
-
-io.on("connection", (socket) => {
-  console.log("a client connected");
-
-//   receiving an event from client
-    socket.on('sendmsg', ( data ) => {
-        console.log(data);
-    })
-
-});
-
-const port = 5000;
+const express = require ('express');
 
 const userRouter = require('./routers/userRouter');
-const productRouter = require('./routers/productRouter');
-const cors = require('cors');
+const contactRouter = require('./routers/contactRouter');
+
+const cors=require('cors');
+// initializing express app
+
+const app=express();
+
+
+
+const port= 5000;
 
 // middleware
-
-// to parse json data into javascript object
 app.use(express.json());
+app.use(cors({origin:['http://localhost:3000']}));
 
-// for allowing frontend to access backend
-app.use( cors({ origin : ['http://localhost:3000'] }) );
+app.use('/user',userRouter);
+app.use('/contact',contactRouter);
 
-app.use('/product', productRouter);
-app.use('/user', userRouter);
+// creating a route/endpoints
+ app.get('/add', (req, res)=>{
+     res.send('request accepted/ response from express!');
 
-app.get('/add', (req, res) => {
-    res.send('Response from Express!');
 });
 
-app.get('/home', (req, res) => {
-    res.send('Response from Express Home!');
+app.get('/home', (req, res)=>{
+    res.send('home!');
+    
 });
 
-// starting the server
-httpServer.listen(port, () => console.log('server started'));
+// listen is a function to start server
+app.listen(port, ()=> { console.log('express server started ready')});

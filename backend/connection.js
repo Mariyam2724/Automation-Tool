@@ -1,18 +1,15 @@
 const mongoose = require('mongoose');
-const dbName = "mytestdb";
-const dbUrl = `mongodb+srv://mmm:mmm@cluster0.gvyon.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 
-// asynchrounous function
-// this function will return a promise
+const db_name='MyMernDB';
 
-// const res = await mongoose.connect(dbUrl);
+const db_url = `mongodb+srv://mariyam2724:mariyam2724@mycluster.4u93r.mongodb.net/${db_name}?retryWrites=true&w=majority`;
 
-mongoose.connect(dbUrl)
+// async function- will return promise
+mongoose.connect(db_url)
 .then((result) => {
-    console.log('Connected to MongoDB');
-})
-.catch((err) => {
-    console.error(err);
+console.log('database connected');
+}).catch((err)=>{
+        console.error(err);
 });
 
-module.exports = mongoose;
+module.exports=mongoose;
