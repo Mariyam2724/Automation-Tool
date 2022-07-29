@@ -7,6 +7,7 @@ import Header from './component/Header';
 import Home from './component/Home';
 import SheetHandler from './component/SheetHandler';
 import Dashboard from './component/Dashboard';
+import Footer from './component/Footer';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route element={ <Dashboard></Dashboard>} path='/ds'/>
 
         </Routes>
+        <Footer/>
         </BrowserRouter>
     </div>
   );

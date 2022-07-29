@@ -43,7 +43,10 @@ body {
 }
 
 .upload {
+  margin-left: 400px;
+  justify-content: center;
   position: relative;
+  
   width: 400px;
   min-height: 445px;
   box-sizing: border-box;

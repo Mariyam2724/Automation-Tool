@@ -1,4 +1,7 @@
 
+
+
+
 import { Formik } from 'formik';
 import React from 'react';
 import Swal from 'sweetalert2';
@@ -44,7 +47,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="mycard">
             <div className="col-md-4 mx-auto bg-light">
                 <div className="card mt-5">
                     <div className="card-body">

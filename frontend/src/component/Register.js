@@ -1,5 +1,7 @@
 import { Formik } from 'formik';
 import React from 'react';
+import Swal from 'sweetalert2';
+ import './register.css';
 
 const Register = () => {
 
@@ -27,38 +29,79 @@ const userSubmit = async (formdata) =>{
 //  ==== type same
      if(response.status===200)
      {console.log(' Success');
+     Swal.fire({
+        icon : 'success',
+        title : 'Success!',
+      text: 'Thanks for Signing Up! '
+         
+      })
     }else{
         console.log('Failed');
+        Swal.fire({
+            icon : 'error',
+            title : 'login faild',
+             text : 'Something went wrong'
+          })
     }
 }
+
+    
 
 // 2. use formik in JSX
 
 
   return (
+    <div className="main">
     <div className="conatiner">
-        <h1 className="form-title" style={{ textAlign : 'center'}}>Register Here to Continue</h1>
+        <div class="card">
+            <div class="row">
+           
+            <div class="card-body col-md-7">
+                <div class="signup-bg">
 
-        <Formik initialValues={{ name: '', email: '', age : 0, password :'' }} onSubmit={userSubmit}>
+                </div>
+            </div>
+             
+            
+            <div class="col-md-5">
+                <div class="card-body">
+                <b><h2 className="form-title" style={{ textAlign : 'center'}} >Create an account<img src="https://cdn.iconscout.com/icon/premium/png-128-thumb/add-user-2606382-2183808.png" class="logo"/></h2></b>
+        
+        <hr/>
+        <Formik initialValues={{ fullname: '', email: '',  password :'' }} onSubmit={userSubmit}>
         
         { ({ values, handleChange, handleSubmit})=> (
              
              <form onSubmit={handleSubmit} >
             
-             <input value={values.name} onChange={handleChange} id="name" placeholder="Name" className="form-control mt-4"/>
-             <input value={values.age} onChange={handleChange} id="age" placeholder="Age" className="form-control mt-4"/>
+             <input value={values.fullname} onChange={handleChange} id="name" placeholder="Enter Fullname" className="form-control mb-4"/>
+             {/* <input value={values.age} onChange={handleChange} id="age" placeholder="Age" className="form-control mt-4"/> */}
              
-             <input value={values.email} onChange={handleChange} id="email" placeholder="Enter Valid Email" className="form-control mt-4"/>
-             <input value={values.password} onChange={handleChange} id="password" placeholder="Enter Secure Password" className="form-control mt-4" type="password"/>
+             <input value={values.email} onChange={handleChange} id="email" placeholder="Enter Valid Email" className="form-control mb-4"/>
+             <input value={values.password} onChange={handleChange} id="password" placeholder="Enter Secure Password" className="form-control mb-4" type="password"/>
              
+             <input type="checkbox" />
+             <label for="">I agree to the T&C</label>
+             <br/>
+
              {/* type- button , submit, reset */}
-             <button type='submit' className='btn btn-primary mt-5'>SUMBIT</button>
+             <button type='submit' className='btn btn-lg btn-success mt-5'>REGISTER</button>
+
+             <br/>
+            <br/>
+            <a href=''>Already Registered?Login Here</a>
+            
             </form>
 
         )}
         </Formik>
-
        
+        </div>
+        </div>
+        </div>
+       </div>
+       
+        </div>
         </div>
   )
 }

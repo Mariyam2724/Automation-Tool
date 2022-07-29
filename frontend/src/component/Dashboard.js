@@ -67,7 +67,7 @@ const Dashboard = () => {
           <a href="#!">
             <div class="mask" style={{backgroundColor: 'rgba(0, 0, 0, 0.3)'}}>
               <div class="d-flex justify-content-start align-items-start h-100">
-                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$239</span></h5>
+               
               </div>
             </div>
             <div class="hover-overlay">
@@ -85,13 +85,13 @@ const Dashboard = () => {
           
             <h1>Add Contacts</h1>
           <a href="#!">
-            <div class="mask" style={{backgroundColor: 'rgba(0, 0, 0, 0.3)'}}>
+            <div class="mask" style={{backgroundColor: ''}}>
               <div class="d-flex justify-content-start align-items-start h-100">
-                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$147</span></h5>
+               
               </div>
             </div>
             <div class="hover-overlay">
-              <div class="mask" style={{backgroundColor: 'rgba(253, 253, 253, 0.15)'}}></div>
+              <div class="mask" style={{backgroundColor: ''}}></div>
             </div>
           </a>
         </div>
@@ -107,13 +107,13 @@ const Dashboard = () => {
           
             <h1>Clean Data</h1>
           <a href="#!">
-            <div class="mask" style={{backgroundColor: 'rgba(0, 0, 0, 0.3)'}}>
+            <div class="mask" style={{backgroundColor: ''}}>
               <div class="d-flex justify-content-start align-items-start h-100">
-                <h5><span class="badge bg-light pt-2 ms-3 mt-3 text-dark">$83</span></h5>
+               
               </div>
             </div>
             <div class="hover-overlay">
-              <div class="mask" style={{backgroundColor: 'rgba(253, 253, 253, 0.15)'}}></div>
+              <div class="mask" style={{backgroundColor:'' }}></div>
             </div>
           </a>
         </div>

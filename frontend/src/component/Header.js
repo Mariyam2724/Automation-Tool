@@ -8,13 +8,13 @@ const Header = () => {
   
   <div className="container">
     
-    <a className="navbar-brand me-2" href="https://mdbgo.com/">
+    <a className="navbar-brand me-2" href="">
       <img
-        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-        height="16"
-        alt="MDB Logo"
+        src="http://atlas-content-cdn.pixelsquid.com/stock-images/chat-message-icon-computer-nraAl3D-600.jpg"
+        height="86"
+        alt="BulkSender"
         loading="lazy"
-      />
+      />BulkSender
     </a>
 
     
@@ -35,21 +35,24 @@ const Header = () => {
       
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <NavLink className="nav-link" to="/home">Home</NavLink>
+          <NavLink className="nav-link" to="/homepage">Home</NavLink>
         </li>
       </ul>
       
 
       <div className="d-flex align-items-center">
-        <button type="button" className="btn btn-link px-3 me-2">
-          Login
+        <button type="button" className="btn btn-link px-3 me-2" >
+        <NavLink className="nav-link" to="/Loginpage">Login</NavLink>
+          
         </button>
-        <button type="button" className="btn btn-primary me-3">
-          Sign up for free
+        <button type="button" className="btn btn-dark px-3 me-3" >
+        <NavLink className="nav-link" to="/signup">
+          
+          Sign up for free</NavLink>
         </button>
         <a
           className="btn btn-dark px-3"
-          href="https://github.com/mdbootstrap/mdb-ui-kit"
+          href="https://github.com/"
           role="button"
           ><i className="fab fa-github"></i
         ></a>

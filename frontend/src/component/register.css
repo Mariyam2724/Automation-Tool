@@ -1,3 +1,31 @@
 .form-title{
-    font-style: italic;
+    font-style: bold;
+    text-align: center; 
+    padding-bottom:1px;
+}
+
+
+.main{
+    background: linear-gradient(rgb(247, 153, 234),rgb(127, 236, 127),rgb(110, 202, 248));
+    height: 60vh;
+    
+    
+}
+
+
+.logo{
+    width:70px;
+    position: relative;
+    left:5px;
+    top: 5px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+ }   
+.signup-bg{
+    background: url(https://c8.alamy.com/comp/R0EM07/abstract-website-template-design-modern-flat-design-people-browsing-internet-on-smartphone-vector-illustration-on-white-background-mobile-app-desi-R0EM07.jpg);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    
 }
