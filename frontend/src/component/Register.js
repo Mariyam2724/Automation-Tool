@@ -51,8 +51,8 @@ const userSubmit = async (formdata) =>{
 
 
   return (
-    <div className="main">
-    <div className="conatiner">
+    <div className="main" style={{minHeight : '100vh'}}>
+    <div className="container" style={{paddingTop : '20vh'}}>
         <div class="card">
             <div class="row">
            
