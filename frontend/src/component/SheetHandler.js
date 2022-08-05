@@ -26,6 +26,7 @@ const SheetHandler = () => {
 		body : JSON.stringify(dataToStore),
         headers: {
             'Content-Type': 'application/json'
+			
         }
 		})
 

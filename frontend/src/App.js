@@ -8,6 +8,7 @@ import Home from './component/Home';
 import SheetHandler from './component/SheetHandler';
 import Dashboard from './component/Dashboard';
 import Footer from './component/Footer';
+import Learmore from './component/Learmore';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route element={ <Register></Register>} path='/signup'/>
       <Route element={ <SheetHandler></SheetHandler>} path='/sheet'/>
       <Route element={ <Dashboard></Dashboard>} path='/ds'/>
+      <Route element={ <Learmore></Learmore>} path='/learn'/>
 
         </Routes>
         <Footer/>

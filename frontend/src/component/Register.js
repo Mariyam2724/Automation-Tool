@@ -52,9 +52,9 @@ const userSubmit = async (formdata) =>{
 
   return (
     <div className="main" style={{minHeight : '100vh'}}>
-    <div className="container" style={{paddingTop : '20vh'}}>
-        <div class="card">
-            <div class="row">
+    <div className="container" style={{paddingTop : '15vh'}}>
+        <div class="card" >
+            <div class="row" >
            
             <div class="card-body col-md-7">
                 <div class="signup-bg">
@@ -89,7 +89,7 @@ const userSubmit = async (formdata) =>{
 
              <br/>
             <br/>
-            <a href=''>Already Registered?Login Here</a>
+            <a href='http://localhost:3000/Loginpage'>Already Registered?Login Here</a>
             
             </form>
 
